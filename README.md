@@ -40,13 +40,13 @@ El proyecto está construido utilizando tecnologías estándar del desarrollo we
 
 Cada miembro del equipo ha actuado como **Product Owner** de una sección específica de la web, siendo responsable de su ciclo completo de desarrollo.
 
-| Miembro           | Rol / Responsabilidad  | GitHub                                          |
-|:------------------|:-----------------------|:------------------------------------------------|
-| **Mael Sifre**    | Sección Menú/Servicios | [@jigary2227](https://github.com/jigary2227)    |
-| **Jose González** | Home Page              | [@jossegonnza](https://github.com/JosseGonnza)  |
-| **[Nombre 3]**    | Sección Contacto       | [@usuario](https://github.com/)                 |
-| **[Nombre 4]**    | Sección Contacto       | [@usuario](https://github.com/)                 |
-| **[Nombre 5]**    | Sección Galería        | [@usuario](https://github.com/)                 |
+| Miembro           | Rol / Responsabilidad       | GitHub                                         |
+|:------------------|:----------------------------|:-----------------------------------------------|
+| **Mael Sifre**    | Sección Menú/Servicios      | [@jigary2227](https://github.com/jigary2227)   |
+| **Carlos Rivas**  | Sección Sobre Nosotros      | [@xhlyter](https://github.com/XhlyTer)         |
+| **Jose González** | Home Page                   | [@jossegonnza](https://github.com/JosseGonnza) |
+| **[Nombre 4]**    | Sección Galería             | [@usuario](https://github.com/)                |
+| **[Nombre 5]**    | Sección Contacto            | [@usuario](https://github.com/)                |
 
 ---
 
