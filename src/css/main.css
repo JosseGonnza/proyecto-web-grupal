@@ -1,0 +1,142 @@
+/* =========================================
+   1. IMPORTS & FUENTES
+   ========================================= */
+/* Importamos Inter (Texto), Space Grotesk (Títulos) y Pacifico (Acentos) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Pacifico&family=Space+Grotesk:wght@500;700&display=swap');
+
+/* =========================================
+   2. VARIABLES (DESIGN SYSTEM)
+   ========================================= */
+:root {
+    /* --- Paleta Oficial (Por Carlos) --- */
+    --primary:      #1F344C;  /* Azul noche: Branding, Headers */
+    --accent:       #177A7A;  /* Verde teal: Botones, Links */
+    --coffee:       #B9772B;  /* Café tostado: Detalles cálidos */
+    --neutral:      #D9D9D9;  /* Gris claro: Fondos secundarios, cards */
+
+    /* --- Colores UI --- */
+    --text-dark:    #222222;
+    --text-light:   #FFFFFF;  /* Blanco puro */
+    --hover-dark:   #152638;  /* Para hover del primario */
+    --success:      #2E8B57;
+    --error:        #C0392B;
+
+    /* --- Tipografías --- */
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body:    'Inter', sans-serif;
+    --font-script:  'Pacifico', cursive; /* Solo detalles */
+}
+
+/* =========================================
+   3. RESET & BASE
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    /* Usamos un blanco roto o el gris muy suave para el fondo general */
+    background-color: #F9F9F9;
+    line-height: 1.6;
+}
+
+/* =========================================
+   4. TIPOGRAFÍA
+   ========================================= */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Clase de utilidad para el toque "Coffee" (Script) */
+.text-handwritten {
+    font-family: var(--font-script);
+    color: var(--coffee);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--hover-dark);
+}
+
+/* =========================================
+   5. COMPONENTES GLOBALES (Header, Footer, Botones)
+   ========================================= */
+
+/* --- Botones (Estándar para todos) --- */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: var(--text-light);
+    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+/* --- Header & Nav --- */
+header {
+    background-color: var(--primary);
+    /* ANTES: padding: 1rem 2rem; */
+    /* AHORA: Le damos más espacio vertical */
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Una sombra un poco más sutil queda más elegante */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: var(--text-light);
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* El detalle "Coffee" en el logo */
+header h1 span {
+    font-family: var(--font-script);
+    color: var(--coffee);
+    font-weight: 400;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: #E0E0E0; /* Un blanco un poco apagado */
+    font-weight: 500;
+}
+
+nav a:hover, nav a.active {
+    color: var(--coffee); /* Hover cálido */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}

@@ -1,0 +1,82 @@
+/* css/home.css - Versión "Pretty" */
+
+/* --- SECCIÓN HERO (Portada) --- */
+.hero-section {
+    /* Usamos un degradado sutil con los azules de la marca para darle profundidad */
+    background: linear-gradient(135deg, var(--primary) 30%, var(--hover-dark) 100%);
+    /* IMPORTANTE: Texto blanco para que se lea sobre el fondo oscuro */
+    color: #FFFFFF;
+    /* Mucho más "aire" vertical para que respire */
+    padding: 8rem 2rem;
+    text-align: center;
+}
+
+.hero-content h2 {
+    /* Título mucho más grande e impactante */
+    color: #FFFFFF;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9; /* Un poco de transparencia queda elegante */
+}
+
+/* --- SECCIÓN CARACTERÍSTICAS (Las cartas) --- */
+.features {
+    padding: 5rem 2rem;
+    text-align: center;
+    /* Fondo gris claro para diferenciar la sección */
+    background-color: #F4F6F8;
+}
+
+.features h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.features > p {
+    margin-bottom: 3rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Más espacio entre cartas */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    /* AHORA: Fondo blanco para que resalte sobre el fondo gris de la sección */
+    background-color: var(--text-light);
+    padding: 2.5rem 2rem;
+    border-radius: 12px; /* Bordes más redondeados */
+    width: 280px;
+    /* Sombra suave y moderna */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Un pequeño efecto al pasar el ratón por encima de las cartas */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.card h4 {
+    color: var(--accent); /* El verde teal */
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: #555;
+}
