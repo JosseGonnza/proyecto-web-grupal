@@ -1,0 +1,376 @@
+/* =========================================
+   1. IMPORTS & FUENTES
+   ========================================= */
+/* Importamos Inter (Texto), Space Grotesk (Títulos) y Pacifico (Acentos) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Pacifico&family=Space+Grotesk:wght@500;700&display=swap');
+
+/* =========================================
+   2. VARIABLES (DESIGN SYSTEM)
+   ========================================= */
+:root {
+    /* --- Paleta Oficial (Por Carlos) --- */
+    --primary:      #1F344C;  /* Azul noche: Branding, Headers */
+    --accent:       #177A7A;  /* Verde teal: Botones, Links */
+    --coffee:       #B9772B;  /* Café tostado: Detalles cálidos */
+    --neutral:      #D9D9D9;  /* Gris claro: Fondos secundarios, cards */
+
+    /* --- Colores UI --- */
+    --text-dark:    #222222;
+    --text-light:   #FFFFFF;  /* Blanco puro */
+    --hover-dark:   #152638;  /* Para hover del primario */
+    --success:      #2E8B57;
+    --error:        #C0392B;
+
+    /* --- Tipografías --- */
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body:    'Inter', sans-serif;
+    --font-script:  'Pacifico', cursive; /* Solo detalles */
+}
+
+/* =========================================
+   3. RESET & BASE
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    /* Usamos un blanco roto o el gris muy suave para el fondo general */
+    background-color: #F9F9F9;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =========================================
+   4. TIPOGRAFÍA
+   ========================================= */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Clase de utilidad para el toque "Coffee" (Script) */
+.text-handwritten {
+    font-family: var(--font-script);
+    color: var(--coffee);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--hover-dark);
+}
+
+/* =========================================
+   5. COMPONENTES GLOBALES (Header, Footer, Botones)
+   ========================================= */
+
+/* --- Botones (Estándar para todos) --- */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: var(--text-light);
+    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+/* --- Header & Nav --- */
+header {
+    background-color: var(--primary);
+    /* ANTES: padding: 1rem 2rem; */
+    /* AHORA: Le damos más espacio vertical */
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Una sombra un poco más sutil queda más elegante */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: var(--text-light);
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* El detalle "Coffee" en el logo */
+header h1 span {
+    font-family: var(--font-script);
+    color: var(--coffee);
+    font-weight: 400;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: #E0E0E0; /* Un blanco un poco apagado */
+    font-weight: 500;
+}
+
+nav a:hover, nav a.active {
+    color: var(--coffee); /* Hover cálido */
+}
+
+#cart {
+    background: var(--accent);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+/* --- Apartado central de la carta --- */
+#introcarta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 15vh;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* --- Generales de la carta --- */
+#carta {
+    padding: 0 20px;
+    max-width: 1400px;
+    margin: 60px auto;
+    background: url("../img/hero1.png") center / contain no-repeat;
+    min-height: 100vh;
+}
+
+/* --- Definiciones relativas a las tarjetas --- */
+#carta .container {
+    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+/* solo la imagen */
+.card {
+    width: 100%;
+    height: 280px;
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card.active {
+  transform: scale(1.05);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px #177A7A;
+}
+
+.card.cafes { 
+    background-image: url("../img/01cafes.png")
+}
+
+.card.desayunosybaker { 
+    background-image: url("../img/02desayunosybarkery.png")
+}
+
+.card.dulces { 
+    background-image: url("../img/03dulces.png")
+}
+
+.card.alternativas { 
+    background-image: url("../img/04alternativas.png")
+}
+
+@media (max-width: 1000px) {
+    #carta .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #carta .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+#menu-panel {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #177a7a6c;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    display: none; /* oculto al inicio */
+    margin-top: 25px;
+}
+
+/* grid productos */
+.menu-grid {
+    display: grid;
+    gap: 12px;
+}
+
+/* cada fila */
+
+
+/* mini imagen */
+.menu-item img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* nombre ocupa espacio */
+.name {
+    flex: 1;
+}
+
+/* precio a la derecha */
+.price {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+
+#menu-panel.active {
+    display: block;
+}
+
+/* fila producto */
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: white;
+    padding: 12px 16px;
+    border-radius: 12px;
+
+    transition: transform .25s ease,
+                box-shadow .25s ease;
+}
+
+/* hover crece */
+.menu-item:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+/* imagen animada */
+.menu-item img {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+
+    transition: transform .25s ease;
+}
+
+.menu-item:hover img {
+    transform: scale(1.2);
+}
+
+/* precio */
+.price {
+    font-weight: bold;
+    color: var(--accent);
+    margin-left: auto;
+}
+
+/* botones ocultos por defecto */
+.actions {
+    display: flex;
+    gap: 8px;
+
+    opacity: 0;
+    transform: translateX(10px);
+
+    transition: all .25s ease;
+}
+
+/* aparecen al hover */
+.menu-item:hover .actions {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* botones estilo */
+.actions button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background: var(--primary);
+}
+
+.qty-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.qty-box button {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.qty {
+    width: 30px;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+    background: transparent;
+}
