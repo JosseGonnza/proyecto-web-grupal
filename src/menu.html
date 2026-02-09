@@ -8,58 +8,66 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/menu.css">
 </head>
+
 <body>
 
 <header>
-    <h1>&lt;Tag & <span>Coffee</span> /&gt;</h1>
+    <!-- Inserción del primer logo en la cabecera y los botones a las otras páginas-->
+    <h1><img src="img/IconoTagCoffe2.png" alt="Banner principal" width="250"></h1>
 
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="menu.html">La Carta</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html" class="active">La Carta</a></li>
             <li><a href="gallery.html">Galería</a></li>
             <li><a href="about.html">Nosotros</a></li>
             <li><a href="contact.html">Contacto</a></li>
         </ul>
     </nav>
+    <div id="cart">
+        🛒 <span id="cart-count">0</span>
+    </div>
 </header>
 
 <main>
-
-    <section class="hero-section">
-        <div class="hero-content">
-            <h2>Desarrollo Web con <span class="text-handwritten">Cafeína</span></h2>
-            <p>El espacio donde el código compila y el café nunca se enfría.</p>
-
-            <a href="menu.html" class="btn">Ver la Carta</a>
-        </div>
+    <!--Frase incial-->
+    <section id="introcarta">
+            <h2><span class="text-handwritten">¿Con qué nos despejamos hoy?</span></h2>
+            <p>Desayunos sencillos, ideas complejas</p>
     </section>
-
-    <section class="features">
-        <h3>¿Qué nos hace diferentes?</h3>
-        <p>Usamos las mejores tecnologías y el mejor grano.</p>
-
-        <div class="cards-container">
-            <article class="card">
-                <h4>Code</h4>
-                <p>Desarrollamos limpio.</p>
-            </article>
-            <article class="card">
-                <h4>Design</h4>
-                <p>Diseñamos con estilo.</p>
-            </article>
-            <article class="card">
-                <h4>Coffee</h4>
-                <p>Servimos calidad.</p>
-            </article>
+    
+    <!--Organización de las tarjetas-->
+    <section id="carta">
+        <div class="container">
+            <div class="card-wrapper">
+                <p><span class="text-handwritten">Compilar café</span></p>
+                <a class="card cafes" href="cafes.html"></a>
+                <h3>Compilamos café cada mañana</h3>
+            </div>
+            <div class="card-wrapper">
+                <p><span class="text-handwritten">Fuel mañanero</span></p>
+                <a class="card desayunosybaker" href="desayunosybaker.html"></a>
+                <h3>El desayuno es dependencias, el café es runtime</h3>
+            </div>
+            <div class="card-wrapper">
+                <p><span class="text-handwritten">Premio desbloqueado</span></p>
+                <a class="card dulces" href="dulces.html"></a>
+                <h3>Pequeños placeres. Grandes proyectos.</h3>
+            </div>
+            <div class="card-wrapper">
+                <p><span class="text-handwritten">Light mode</span></p>
+                <a class="card alternativas" href="alternativas.html"></a>
+                <h3>Aquí el único crash es sin desayuno</h3>
+            </div>
         </div>
+        <section id="menu-panel"></section>
     </section>
-
+    
 </main>
 
 <footer>
     <p>&copy; 2026 Tag & Coffee - Hecho con código y <span class="text-handwritten">amor</span></p>
 </footer>
-
+<script src="js/main.js"></script>
 </body>
 </html>
