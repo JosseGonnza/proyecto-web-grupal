@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/faviconTagCoffe.png">
+    <title>Tag & Coffee | Pago</title>
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+
+<div id="success-modal" class="modal">
+  <div class="modal-content">
+    <h2>🚀 Deploy completado</h2>
+    <p id="success-message"></p>
+    <button id="continue-btn">Continuar</button>
+  </div>
+</div>
+
+<body>
+
+<header>
+    <h1><img src="img/IconoTagCoffe2.png" alt="Banner principal" width="250"></h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html" class="active">La Carta</a></li>
+            <li><a href="gallery.html">Galería</a></li>
+            <li><a href="about.html">Nosotros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+  <section class="checkout-container">
+    <div class="checkout-left">
+      <h2>Resumen del pedido</h2>
+      <div id="checkout-items"></div>
+      <h3 id="checkout-total"></h3>
+    </div>
+    <div class="checkout-right">
+      <h2>Datos de envío y pago</h2>
+      <form id="payment-form">
+        <label>Nombre completo</label>
+        <input type="text" id="nombre" value="María Bug" required>
+        <label>Dirección</label>
+        <input type="text" id="direccion" value="C/Del código erróneo" required>
+        <label>Ciudad</label>
+        <input type="text" id="ciudad" value="BigData City"required>
+        <label>Número de tarjeta</label>
+        <input type="text" id="tarjeta" maxlength="16" value="101010100010100101011101" required>
+        <div class="card-row">
+        <div class="field">
+          <label>Mes</label>
+          <input type="text" id="mes" maxlength="2" value="12">
+          <span class="status" id="mes-status"></span>
+        </div>
+        <div class="field">
+          <label>Año</label>
+          <input type="text" id="anio" maxlength="2" value="27">
+          <span class="status" id="anio-status"></span>
+        </div>
+        <div class="field">
+          <label>CVV</label>
+          <input type="text" id="cvv" maxlength="3" value="123">
+          <span class="status" id="cvv-status"></span>
+        </div>
+    </div>
+        <button type="submit" id="pay-btn">Pagar ahora</button>
+      </form>
+      <div id="payment-message"></div>
+    </div>
+  </section>
+      <!--Frase final-->
+  <div>
+    <section id="endcheck">
+            <h2><span class="text-handwritten">Último commit antes del primer sorbo</span></h2>
+            <p>Menos errores. Más espresso</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Tag & Coffee - Hecho con código y <span class="text-handwritten">amor</span></p>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
