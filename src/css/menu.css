@@ -207,6 +207,20 @@ footer {
     text-shadow: 0 1px 6px #1F344C;
 }
 
+#introcarta .text-handwritten {
+    color: #B9772B;
+    text-shadow:
+        1px 1px 0 var(--primary),
+        -1px 1px 0 var(--primary),
+        1px -1px 0 var(--primary),
+        -1px -1px 0 var(--primary);
+}
+
+#introcarta span {
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
 /* Generales de la carta */
 #carta {
     padding: 0 20px;
@@ -228,6 +242,26 @@ footer {
     text-align: center;
     gap: 10px;
     height: 100%;
+    background: rgba(255, 255, 255, 0.432);
+    backdrop-filter: blur(10px);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px #177a7a6c;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.card-wrapper .text-handwritten {
+    color: #B9772B;
+    text-shadow:
+        1px 1px 0 var(--primary),
+        -1px 1px 0 var(--primary),
+        1px -1px 0 var(--primary),
+        -1px -1px 0 var(--primary);
+}
+
+.card-wrapper span {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 #carta p {
@@ -385,10 +419,10 @@ footer {
     z-index: 2000;
     width: 260px;
     max-height: 70vh;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.432);
     backdrop-filter: blur(10px);
     border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    box-shadow: 0 10px 30px #177a7a6c;
     padding: 15px;
     overflow-y: auto;
     transform: translateX(120%);
@@ -462,6 +496,8 @@ footer {
     width: 100%;
     margin-top: 15px;
     padding: 10px;
+    font-size: 1rem;
+    text-shadow: 0 2px 11px #177A7A;
     background: #1F344C;
     color: #B9772B;
     border: none;
@@ -476,11 +512,9 @@ footer {
 }
 
 #compile-output {
-
     margin-top: 15px;
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
-
     color: #B9772B;
 }
 

@@ -176,7 +176,11 @@ nav a:hover, nav a.active {
 }
 
 #endcheck h2 {
-    text-shadow: 0 2px 5px #1F344C;
+    text-shadow:
+        1px 1px 0 var(--primary),
+        -1px 1px 0 var(--primary),
+        1px -1px 0 var(--primary),
+        -1px -1px 0 var(--primary);
 }
 
 #endcheck p {
